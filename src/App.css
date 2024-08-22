@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+.outer-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to top left, #18193e 0%, #092e48 50%);
+}
+.main-div {
+  width: 50%;
+  height: 600px;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 8px;
+  flex-direction: column;
+  background: linear-gradient(to top left, #00b6ff 0%, #0551fe 50%);
+}
+
+.counter-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #05affd;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.counter-box.increment {
+  animation: moveUp 0.3s ease-in-out;
+}
+
+.counter-box.decrement {
+  animation: moveDown 0.3s ease-in-out;
+}
+.text-div {
+  text-align: center;
+}
+.text-div h1 {
+  font-size: 2.5rem;
+  user-select: none;
+}
+.text-div p {
+  color: #d4d4d4;
+  user-select: none;
+}
+.text-div p span {
+  font-weight: 700;
+  color: #fff;
+  user-select: none;
+}
+button {
+  border: none;
+  outline: none;
+  background: linear-gradient(to top left, #fea517 0%, #fe2b65 50%);
+  color: #fff;
+  padding: 0.5rem 3.75rem;
+  font-size: 1.25rem;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(to bottom right, #fea517 0%, #fe2b65 50%);
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.counter-number {
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  .main-div {
+    width: 80%;
+    height: 600px;
+  }
+}
+@media (max-width: 568px) {
+  .main-div {
+    width: 95%;
+    height: 600px;
+  }
+}
